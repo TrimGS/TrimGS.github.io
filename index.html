@@ -402,6 +402,27 @@
           </div>
         </div>
 
+        <h3 class="title is-4">Comparison of point clouds (Gaussian centers)</h3>
+        <div style="display: flex;">
+          <div class="content has-text-centered" style="width: 50%; margin-right: 20px;">
+            <video poster="" id="flower_pcd" autoplay muted loop playsinline height="100%">
+              <source src="./resources/flowers_pcd.mp4"
+              type="video/mp4">
+            </video>
+          </div>
+
+          <div class="content has-text-centered" style="width: 50%;">
+            <video poster="" id="bicycle_pcd" autoplay muted loop playsinline height="100%">
+              <source src="./resources/bicycle_pcd.mp4"
+              type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <div class="content has-text-justified" style="margin-top: -20px;">
+          <p>
+            Our Trim2DGS yields a more <b>uniform</b> distribution of Gaussians while <b>reducing the storage consumption</b>.
+          </p>
+        </div>
       </div>
     </div>
 
@@ -416,23 +437,7 @@
       <div class="column is-full-width">
         <h2 class="title is-3 has-text-centered" style="margin-top: -80px">Reconstructions on DTU Dataset</h2>
 
-        <h3 class="title is-4">scan 24</h3>
-        <div class="item item-scan24">
-          <video poster="" id="scan24" autoplay muted loop playsinline height="100%" style="margin-bottom: 25px;">
-            <source src="./resources/scan24_merge.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-
-        <h3 class="title is-4">scan 106</h3>
-        <div class="item item-scan106">
-          <video poster="" id="scan106" autoplay muted loop playsinline height="100%" style="margin-bottom: 25px;">
-            <source src="./resources/scan106_merge.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-
-        <h3 class="title is-4">Comparison of meshes on DTU dataset</h3>
+        <h3 class="title is-4">Comparison of meshes</h3>
 
         <div class="content has-text-justified">
           <p>
@@ -440,8 +445,36 @@
           </p>
         </div>
 
-        <!-- add margin below the image -->
         <img src="./resources/mesh.jpg" style="margin-bottom: 25px;" class="center">
+
+        <h3 class="title is-4">scan 24</h3>
+        <div class="item item-scan24">
+          <video poster="" id="scan24" autoplay controls muted loop playsinline height="100%" style="margin-bottom: 25px;">
+            <source src="./resources/scan24_merge.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
+        <h3 class="title is-4">scan 106</h3>
+        <div class="item item-scan106">
+          <video poster="" id="scan106" autoplay controls muted loop playsinline height="100%" style="margin-bottom: 25px;">
+            <source src="./resources/scan106_merge.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
+        <h3 class="title is-4">Comparison of point clouds (Gaussian centers)</h3>
+        <div class="item item-DTUpcd">
+          <video poster="" id="DTUpcd" autoplay controls muted loop playsinline height="100%" style="margin-bottom: 5px;">
+            <source src="./resources/dtu_pcd.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            Our Trim2DGS and Trim3DGS yield a more <b>uniform</b> distribution of Gaussians, representing the geometry more accurately.
+          </p>
+        </div>
       </div>
     </div>
 
