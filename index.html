@@ -333,12 +333,12 @@
       <div class="column is-full-width">
         <h2 class="title is-3 has-text-centered" style="margin-top: -30px">Reconstructions on Mip-NeRF 360 Dataset</h2>
 
-        <h3 class="title is-4">Comparison wtih 3DGS</h3>
-        <!-- <div class="content has-text-justified">
+        <h3 class="title is-4">Comparison of color and normal maps wtih 3DGS</h3>
+        <div class="content has-text-justified">
           <p>
-            2DGS fails to reconstruct background geometry, while our method can reconstruct more detailed geometry for both foreground objects and backgrounds.
+            Trim3DGS can reconstruct smoother normal maps than 3DGS.
           </p>
-        </div> -->
+        </div>
 
         <div style="display: flex;">
           <div class="content has-text-centered" style="width: 50%; margin-right: 20px;">
@@ -354,12 +354,12 @@
           </div>
         </div>
 
-        <h3 class="title is-4">Comparison wtih 2DGS</h3>
-        <!-- <div class="content has-text-justified">
+        <h3 class="title is-4">Comparison of color and normal maps wtih 2DGS</h3>
+        <div class="content has-text-justified">
           <p>
-            Compared with SuGaR, our method can reconstruct more detailed and smooth geometry for both foreground objects and backgrounds.
+            Compared with 2DGS, our Trim2DGS exhibits better geometric details and perceptual quality.
           </p>
-        </div> -->
+        </div>
 
         <div style="display: flex;">
           <div class="content has-text-centered" style="width: 50%; margin-right: 20px;">
@@ -379,14 +379,14 @@
 
         <div class="content has-text-justified">
           <p>
-            Our Trim2DGS significantly enhances perceptual quality in high-frequency regions. It mitigates the issue of over-smoothness caused by 2DGS. Notably, Trim2DGS substantially reduces the storage consumption, credited to our proposed contribution-based trimming technique.
+            Our Trim2DGS significantly enhances perceptual quality in high-frequency regions and substantially reduces the storage consumption.
           </p>
         </div>
 
         <!-- add margin below the image -->
         <img src="./resources/normal.jpg" style="margin-bottom: 25px;" class="center">
 
-        <h3 class="title is-4">Geometry Reconstruction</h3>
+        <h3 class="title is-4">Visualization of meshes</h3>
 
         <div style="display: flex;">
           <div class="content has-text-centered" style="width: 50%; margin-right: 20px;">
@@ -404,7 +404,12 @@
           </div>
         </div>
 
-        <h3 class="title is-4">Comparison of point clouds (Gaussian centers)</h3>
+        <h3 class="title is-4">Visualization of Gaussian centers</h3>
+        <div class="content has-text-justified">
+          <p>
+            Our Trim2DGS yields a more <b>uniform</b> distribution of Gaussians while <b>reducing the storage consumption</b>.
+          </p>
+        </div>
         <div style="display: flex;">
           <div class="content has-text-centered" style="width: 50%; margin-right: 20px;">
             <video poster="" id="flower_pcd" autoplay muted loop playsinline height="100%">
@@ -420,11 +425,6 @@
             </video>
           </div>
         </div>
-        <div class="content has-text-justified" style="margin-top: -20px;">
-          <p>
-            Our Trim2DGS yields a more <b>uniform</b> distribution of Gaussians while <b>reducing the storage consumption</b>.
-          </p>
-        </div>
       </div>
     </div>
 
@@ -439,17 +439,17 @@
       <div class="column is-full-width">
         <h2 class="title is-3 has-text-centered" style="margin-top: -80px">Reconstructions on DTU Dataset</h2>
 
-        <h3 class="title is-4">Comparison of meshes</h3>
+        <h3 class="title is-4">Comparison of meshes with other methods</h3>
 
         <div class="content has-text-justified">
           <p>
-            Note SuGaR uses a different mesh extraction strategy from others, so it includes some background. 3DGS and SuGaR have <b>messy geometry</b> and 2DGS exhibits slight <b>over-smoothness</b>.
+            For better visualization, we zoom in the details, revealing that Trim2DGS and Trim3DGS exhibit accurate geometry representation.
           </p>
         </div>
 
         <img src="./resources/mesh.jpg" style="margin-bottom: 25px;" class="center">
 
-        <h3 class="title is-4">scan 24</h3>
+        <h4 class="title is-5">Sample 1 (scan 24)</h4>
         <div class="item item-scan24">
           <video poster="" id="scan24" autoplay controls muted loop playsinline height="100%" style="margin-bottom: 25px;">
             <source src="./resources/scan24_merge.mp4"
@@ -457,7 +457,7 @@
           </video>
         </div>
 
-        <h3 class="title is-4">scan 106</h3>
+        <h4 class="title is-5">Sample 2 (scan 106)</h4>
         <div class="item item-scan106">
           <video poster="" id="scan106" autoplay controls muted loop playsinline height="100%" style="margin-bottom: 25px;">
             <source src="./resources/scan106_merge.mp4"
@@ -465,20 +465,20 @@
           </video>
         </div>
 
-        <h3 class="title is-4">Comparison of point clouds (Gaussian centers)</h3>
-        <div class="item item-DTUpcd">
-          <video poster="" id="DTUpcd" autoplay controls muted loop playsinline height="100%" style="margin-bottom: 5px;">
-            <source src="./resources/dtu_pcd.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
+        <h3 class="title is-4">Visualization of Gaussian centers</h3>
         <div class="content has-text-justified">
           <p>
             Our Trim2DGS and Trim3DGS yield a more <b>uniform</b> distribution of Gaussians, representing the geometry more accurately.
           </p>
         </div>
+        <div class="item item-DTUpcd">
+          <video poster="" id="DTUpcd" autoplay controls muted loop playsinline height="100%" style="margin-bottom: 25px;">
+            <source src="./resources/dtu_pcd.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
 
-        <h3 class="title is-4">Geometry Reconstruction (Trim2DGS)</h3>
+        <h3 class="title is-4">More samples</h3>
         <div class="item item-DTU">
           <video poster="" id="DTU" autoplay controls muted loop playsinline height="100%" style="margin-bottom: 5px;">
             <source src="./resources/DTU.mp4"
